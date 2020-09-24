@@ -10,7 +10,11 @@ let arr2 = [56, 98, 65, 3, 4, 58, 68, 90, 12, 34, 45]
 
 
 const halfSorted = function(arr) {
-
+    let arr1 = arr.splice(0,arr.length / 2);
+    arr1.sort(function(a, b){return a - b});
+    arr.sort(function(a, b){return b - a});
+    arr = arr1.concat(arr);
+    return arr;
 };
 
 
